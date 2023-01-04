@@ -1,7 +1,7 @@
-// Largest Divisible Subset
-// Link: https://leetcode.com/problems/largest-divisible-subset/
-// Time Complexity:
-// Space Complexity:
+// Largest Perfect Rectangle
+// Link: https://leetcode.com/problems/perfect-rectangle/
+// Time Complexity: O(N) // N = Number of rectangles
+// Space Complexity: O(N) // N = Number of rectangles
 
 #include<bits/stdc++.h>
 using namespace std;
