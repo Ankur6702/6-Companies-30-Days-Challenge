@@ -34,3 +34,28 @@ public:
         return ans;
     }
 };
+
+// Giving TLE
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> ans; // {nums[i], index}
+        int n = nums.size(); 
+        for(int i = 0; i < n; i++) {
+            int target = -nums[i];
+            unordered_map<int, int> m;
+            for(int j = i + 1; j < n; j++) {
+                if(m.find(nums[j]) != m.end()) {
+                    vector<int> temp{nums[i], nums[m[nums[j]]], nums[j]};
+                    sort(temp.begin(), temp.end());
+                    ans.push_back(temp);
+                }
+                m[target - nums[j]] = j;
+            }
+        }
+        // Removing duplicates
+        sort(ans.begin(), ans.end());
+        ans.erase(unique(ans.begin(), ans.end()), ans.end());
+        return ans;
+    }
+};
