@@ -1,6 +1,7 @@
 // Increasing Triplet Subsequence
 // Link: https://leetcode.com/problems/increasing-triplet-subsequence
-// Time 
+// Time Complexity: O(N)
+// Space Complexity: O(1)
 
 #include<bits/stdc++.h>
 using namespace std;
