@@ -19,6 +19,7 @@ bool backtrack(vector<int>& nums,vector<int>visited, int target, int curr_sum, i
             visited[j] = true;
             if (backtrack(nums, visited, target, curr_sum + nums[j], j+1, k)) return true;
             visited[j] = false;
+            if(curr_sum == 0) break;
         }
         
         return false;
