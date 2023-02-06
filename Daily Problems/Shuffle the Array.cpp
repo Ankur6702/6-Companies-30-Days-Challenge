@@ -1,0 +1,20 @@
+// Shuffle the Array
+// Link: https://leetcode.com/problems/shuffle-the-array/
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> shuffle(vector<int>& nums, int n) {
+        vector<int> ans;
+        
+        for(int i =0 ;i < n;i++){
+            ans.push_back(nums[i]);
+            ans.push_back(nums[i+n]);
+        }
+        return ans;
+    }
+};
