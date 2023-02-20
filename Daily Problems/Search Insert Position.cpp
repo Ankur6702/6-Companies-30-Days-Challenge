@@ -1,0 +1,22 @@
+// Search Insert Position
+// Link: https://leetcode.com/problems/search-insert-position/
+// Time Complexity: O(logN)
+// Space Complexity: O(1)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        int low = 0, high = nums.size() - 1;
+        int mid;
+        while(low <= high) {
+            mid = (high + low) / 2;
+            if(nums[mid] == target) return mid;
+            else if(nums[mid] > target) high = mid - 1;
+            else low = mid + 1;
+        }
+        return high + 1;
+    }
+};
